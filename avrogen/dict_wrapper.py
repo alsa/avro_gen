@@ -66,10 +66,10 @@ if six.PY3:
             raise NotImplementedError()
 
         def __eq__(self, other):
-            return self._inner_dict.__eq__(other)
+            return self._inner_dict == other
 
         def __ne__(self, other):
-            return self._inner_dict.__ne__(other)
+            return not self._inner_dict == other
 
         def __le__(self, other):
             return self._inner_dict.__le__(other)
@@ -172,10 +172,10 @@ else:
             raise NotImplementedError()
 
         def __eq__(self, other):
-            return self._inner_dict.__eq__(other)
+            return self._inner_dict == other
 
         def __ne__(self, other):
-            return self._inner_dict.__ne__(other)
+            return not self._inner_dict == other
 
         def __le__(self, other):
             return self._inner_dict.__le__(other)
